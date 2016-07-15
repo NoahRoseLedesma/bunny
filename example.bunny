@@ -1,0 +1,13 @@
+#1
+$a <- 123
+$a ->
+@id
+bump-
+out
+hopz id2
+hop id
+@id2
+$a <- "done"
+$a ->
+out
+end
