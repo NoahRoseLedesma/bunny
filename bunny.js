@@ -13,20 +13,17 @@ handle.on('error', function(){
 })
 
 var file = parser.parseFile(fileinput)
-var hops = {};
+var hops = parser.preview(file);
 
 for(var line = 0; line < file.length; line++){
   var code = parser.parseLine(file[line], [fileinput, line], operations)
-  code = code.filter(function(v){return v!==''});
-
+  if(code === false) continue;
   if(!errorFlagged) {
+  code = code.filter(function(v){return v!==''});
     var op = code.shift();
     code.unshift([fileinput, line]);
     operations[op].operation.apply(this, code)
 
-    if(op == 'point') {
-      hops[code[1]] = line
-    }
     if(op == 'hoz') {
       line = (bunny_hand===0) ? hops[code[1]] : line
     }

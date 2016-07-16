@@ -1,7 +1,15 @@
-#1
-$a <- 1
+#2
+$a <- 10
+$b <- 2
+$b ->
+add $a
+$a <-
 $a ->
+sub $b
+$a <-
 @id
-bump-
 out
-hopz id
+bump-
+hoz done
+hop id
+@done
