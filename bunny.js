@@ -2,7 +2,7 @@ const handle = require('./lib/handle.js')
 const parser = require('./lib/parser.js')
 const operations = require('./operations')
 
-const fileinput = __dirname + '\\helloworld.bunny'
+const fileinput = process.argv[2]
 
 global.bunny_hand = undefined
 global.bunny_memory = undefined
@@ -29,6 +29,9 @@ for(var line = 0; line < file.length; line++){
     }
     if(op == 'hop') {
       line = hops[code[1]]
+    }
+    if(op == 'hon'){
+      line = (bunny_hand<0) ? hops[code[1]] : line
     }
   } else {
     process.exit(1)
