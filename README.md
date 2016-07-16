@@ -1,4 +1,4 @@
-# Bunny
+![Bunnyscript- Simple Computer](https://github.com/NoahRoseLedesma/bunny/blob/master/bunny.png)
 
 Bunnyscript is a pseudo assembly language designed for understanding the inner workings of simple computers.
 
