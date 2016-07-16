@@ -5,9 +5,10 @@ module.exports = {
   description: 'Creates virtural memory',
   keyword : '#',
   max_arguments : 1,
-  operation : function(size, location) {
+  operation : function(location, size) {
     if(size != undefined && size > 0) {
-      global.bunny_memory = Array(Number(size))
+      global.bunny_memory = new Array()
+      global.bunny_maxmemory = size
     } else {
       handle.throw(`Memory Error. Cannot initialize memory with value of ${size}`, location, 0)
     }
